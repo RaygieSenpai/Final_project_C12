@@ -27,15 +27,7 @@ urlpatterns = [
     path('about/', TemplateView.as_view(template_name="About.html"), name="about"),
     path('contact/', TemplateView.as_view(template_name="Contact.html"), name="contact"),
 
-    path('dealers', TemplateView.as_view(template_name="index.html")),
-    path('dealers/', TemplateView.as_view(template_name="index.html")),
-    path('dealer/<int:id>', TemplateView.as_view(template_name="index.html")),
-    path('dealer/<int:id>/', TemplateView.as_view(template_name="index.html")),
-    path('postreview/<int:id>', TemplateView.as_view(template_name="index.html")),
-    path('postreview/<int:id>/', TemplateView.as_view(template_name="index.html")),
-
     path('login', TemplateView.as_view(template_name="index.html")),
     path('login/', TemplateView.as_view(template_name="index.html")),
-    path('register', TemplateView.as_view(template_name="index.html")),
-    path('register/', TemplateView.as_view(template_name="index.html")),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
